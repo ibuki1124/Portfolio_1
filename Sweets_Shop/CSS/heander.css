@@ -16,7 +16,20 @@
   body{
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 185, 217);
+  }
+
+  body::after{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    /* background-color: rgb(255, 218, 236); */
+    /* background: linear-gradient(to bottom, rgb(255, 218, 236),rgb(255, 255, 255));
+    background: -webkit-linear-gradient(to bottom, rgb(255, 218, 236),rgb(255, 255, 255));
+    background: -moz-linear-gradient(to bottom, rgb(255, 218, 236),rgb(255, 255, 255)); */
+    z-index: -1;
   }
 
   header{
@@ -37,7 +50,8 @@
     padding: 10px 20px;
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 185, 217);
+    background-color: rgb(255, 162, 204);
+    /* background-color: rgb(255, 185, 217); */
     z-index: 999;
   }
   
@@ -90,11 +104,9 @@
     align-items: center;
   }
 
-  div form input[type=submit],
-  div form input[type=reset]{
+  div form input[type=submit]{
       margin: 10px;
-      font-family: "Yu Gothic";
-      /* font-family: "Hannari"; */
+      font-family: "Hannari";
       font-size: 16px;
       font-weight: 900;
       text-align: center;
@@ -110,10 +122,33 @@
       cursor: pointer;
   }
 
-  div form input[type=submit]:hover,
-  div form input[type=reset]:hover{
+  div form input[type=submit]:hover{
     box-shadow: none;
     color: #cf00cf;
+    background: #fff;
+  }
+
+  div form input[type=reset]{
+    margin: 10px;
+    font-family: "Hannari";
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    line-height: 1em;
+    color: #fff;
+    border-radius: 5%;
+    background-color: #4f00cf;
+    transition: .3s;
+    box-shadow: 6px 6px 3px #666;
+    border: 2px solid #4f00cf;
+    cursor: pointer;
+  }
+
+  div form input[type=reset]:hover{
+    box-shadow: none;
+    color: #4f00cf;
     background: #fff;
   }
 

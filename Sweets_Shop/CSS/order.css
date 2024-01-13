@@ -3,7 +3,14 @@ html{
 }
 
 .sub-title{
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.confirm{
     font-size: 32px;
+    font-weight: 900;
     text-align: center;
 }
 
@@ -14,6 +21,7 @@ html{
 }
 
 .order{
+    position: relative;
     width: 400px;
     margin-bottom: 20px;
     border: 5px solid pink;
@@ -24,6 +32,7 @@ html{
     width: 100%;
     background-color: wheat;
     font-size: 24px;
+    font-weight: 700;
 }
 
 .order-element{
@@ -41,6 +50,16 @@ html{
 
 .element-2{
     width: 70%;
+}
+
+.button-c{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.history{
+    justify-content: flex-end;
 }
 
 .page-top{
@@ -99,3 +118,9 @@ a::after{
     font-size: 24px;
     font-weight: 900;
  }
+
+ @media screen and (max-width:1920px){
+    .sub-title{
+        font-size: 32px;
+    }
+}

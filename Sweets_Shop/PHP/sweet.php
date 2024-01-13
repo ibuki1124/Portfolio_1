@@ -36,71 +36,98 @@
         <main>
             <form action="confirm.php" method="POST">
                 <div class="food">
-                    <p>商品一覧</p>
-                    <p>お菓子</p>
-                    <div class="sweets">
-                        <div class="sweet">
-                            <div class="sweet-name">キャンディ</div>
-                            <input type="radio" name="sweet" value="candy" id="candy" checked>
-                            <label for="candy"></label>
-                        </div>
+                    <p class="sub-title">商品一覧</p>
+                    <div class="container-1">
+                        <p class="food-title">お菓子</p>
+                        <div class="sweets">
+                            <div class="sweet">
+                                <div class="sweet-name">キャンディ</div>
+                                <input type="radio" name="sweet" value="candy" id="candy" checked>
+                                <label for="candy"></label>
+                            </div>
+                            <div class="sweet">
+                                <div class="sweet-name">グミ</div>       
+                                <input type="radio" name="sweet" value="gummy" id="gummy">
+                                <label for="gummy"></label>
+                            </div>
+                            <div class="sweet">  
+                                <div class="sweet-name">チョコレート</div>         
+                                <input type="radio" name="sweet" value="chocolate" id="chocolate">
+                                <label for="chocolate"></label>
+                            </div>
+                            <div class="sweet">    
+                                <div class="sweet-name">マカロン</div>         
+                                <input type="radio" name="sweet" value="macaron" id="macaron">
+                                <label for="macaron"></label>
+                            </div>
+                            <div class="sweet">   
+                                <div class="sweet-name">ケーキ</div>    
+                                <input type="radio" name="sweet" value="cake" id="cake">
+                                <label for="cake"></label>
+                            </div>
+                            <div class="sweet">   
+                                <div class="price">
+                                    <p class="price-title">値段表</p>
+                                    <div class="price-box">
+                                        <div class="price-list">
+                                            <p class="sweet-name-p">キャンディ</p>
+                                            <p class="sweet-price">100円</p>
+                                        </div>
+                                        <div class="price-list">
+                                            <p class="sweet-name-p">グミ</p>
+                                            <p class="sweet-price">100円</p>
+                                        </div>
+                                        <div class="price-list">
+                                            <p class="sweet-name-p">チョコレート</p>
+                                            <p class="sweet-price">150円</p>
+                                        </div>
+                                        <div class="price-list">
+                                            <p class="sweet-name-p">マカロン</p>
+                                            <p class="sweet-price">300円</p>
+                                        </div>
+                                        <div class="price-list">
+                                            <p class="sweet-name-p">ケーキ</p>
+                                            <p class="sweet-price">500円</p>
+                                        </div>
+                                        <span>味による値段変動なし</span>
+                                    </div>
+                                </div>
 
-                        <div class="sweet">
-                            <div class="sweet-name">グミ</div>       
-                            <input type="radio" name="sweet" value="gummy" id="gummy">
-                            <label for="gummy"></label>
+                            </div>
                         </div>
+                        <p class="food-title">味</p>
+                        <div class="tastes">
+                            <div class="taste">
+                                <div class="taste-name">ストロベリー</div>
+                                <input type="radio" name="taste" value="berry" id="berry" checked>
+                                <label for="berry"></label>
+                            </div>
 
-                        <div class="sweet">  
-                            <div class="sweet-name">チョコレート</div>         
-                            <input type="radio" name="sweet" value="chocolate" id="chocolate">
-                            <label for="chocolate"></label>
-                        </div>
+                            <div class="taste">
+                                <div class="taste-name">グレープ</div>
+                                <input type="radio" name="taste" value="grape" id="grape">
+                                <label for="grape"></label>
+                            </div>
 
-                        <div class="sweet">    
-                            <div class="sweet-name">マカロン</div>         
-                            <input type="radio" name="sweet" value="macaron" id="macaron">
-                            <label for="macaron"></label>
-                        </div>
-
-                        <div class="sweet">   
-                            <div class="sweet-name">ケーキ</div>    
-                            <input type="radio" name="sweet" value="cake" id="cake">
-                            <label for="cake"></label>
+                            <div class="taste">
+                                <div class="taste-name">オレンジ</div>    
+                                <input type="radio" name="taste" value="orange" id="orange">
+                                <label for="orange"></label>
+                            </div>
                         </div>
                     </div>
-                    <p>味</p>
-                    <div class="tastes">
-                        <div class="taste">
-                            <div class="taste-name">ストロベリー</div>
-                            <input type="radio" name="taste" value="berry" id="berry" checked>
-                            <label for="berry"></label>
-                        </div>
 
-                        <div class="taste">
-                            <div class="taste-name">グレープ</div>
-                            <input type="radio" name="taste" value="grape" id="grape">
-                            <label for="grape"></label>
-                        </div>
-
-                        <div class="taste">
-                            <div class="taste-name">オレンジ</div>    
-                            <input type="radio" name="taste" value="orange" id="orange">
-                            <label for="orange"></label>
-                        </div>
-                    </div>
-
-                    <p>個数</p>
-                    <div class="container">
+                    <p class="num">個数</p>
+                    <span>＊1注文につき10個まで</span>
+                    <div class="container-2">
                         <div class="field">
                             <button type="button" class="button" id="down">－</button>
                             <input type="number" value="1" class="inputtext" id="textbox" name="order_num" readonly>
                             <button type="button" class="button" id="up">＋</button>
                         </div>
                         <button type="button" class="button resetbtn" id="reset">RESET</button>
+                        <input type="submit" name="sweets" value="確認へ" class="button-c">
                     </div>
-
-                    <input type="submit" name="sweets" value="確認へ">
                 </div>
             </form>
 

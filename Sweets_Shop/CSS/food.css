@@ -1,3 +1,13 @@
+.sub-title{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.food-title{
+    font-size: 32px;
+    font-weight: 900;
+}
+
 input[type=radio]{
     display: none;
 }
@@ -48,9 +58,52 @@ input[type=radio][name="taste"]:checked+label::before{
     transform: scale(1.2, 1.2);
 }
 
+.price-title{
+    /* border-bottom: 1px solid #666; */
+    background-color: gainsboro;
+    font-size: 24px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    border: 2px solid #666;
+    border-bottom: 0;
+}
+
+.price-box{
+    width: 180px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #666;
+}
+
+.price-list{
+    display: flex;
+}
+
+.sweet-name-p{
+    width: 60%;
+    text-align: justify;
+    text-align-last: justify;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+}
+
+.sweet-price{
+    width: 40%;
+    border-bottom: 1px solid #666;
+}
+
 .food{
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-1{
+    width: 100%;
 }
 
 .sweets{
@@ -59,56 +112,137 @@ input[type=radio][name="taste"]:checked+label::before{
     justify-content: center;
 }
 
+.sweet:last-child{
+    border-left: 2px solid grey;
+    padding-left: 20px;
+}
+
 .tastes{
     width: 100%;
     display: flex;
-    justify-content: center;
+    padding: 0 25%;
+    justify-content: space-around;
+}
+
+.sweet,
+.taste{
+    margin: 10px;
 }
 
 .sweet-name,
-.taste-name{
+.taste-name,
+.num{
     font-size: 24px;
     font-weight: 900;
     margin-bottom: 10px;
 }
 
-.container {
+.container-2 {
     width: 100%;
   }
   
-  .field {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .inputtext {
-    color:rgba(43, 32, 32, 0.76) ;
-    font-size: 18px;
-    border-left: 0;
-    border-right: 0;
-    width: 80px;
-    line-height: 3rem;
-    text-align: center;
-    border: 1px solid #D7DBDD;
-    padding: 0 10px;
-  }
+.field {
+display: flex;
+justify-content: center;
+}
 
-  .inputtext:focus{
-    border: 1px solid #D7DBDD;
-    outline: none;
-  }
-  
-  .button {
-    color:rgba(43, 32, 32, 0.76) ;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 5px 25px;
-    background-color: white;
-    border: 1px solid #D7DBDD;
-    border-radius: 0;
-    outline: 0;
-  }
-  
-  .resetbtn {
+span{
+    color: red;
+    margin-left: 3px;
+}
+
+.inputtext {
+color:rgba(43, 32, 32, 0.76) ;
+font-size: 18px;
+border-left: 0;
+border-right: 0;
+width: 80px;
+line-height: 3rem;
+text-align: center;
+border: 1px solid #D7DBDD;
+padding: 0 10px;
+}
+
+.inputtext:focus{
+border: 1px solid #D7DBDD;
+outline: none;
+}
+
+.button {
+color:rgba(43, 32, 32, 0.76) ;
+font-size: 18px;
+cursor: pointer;
+padding: 5px 25px;
+background-color: white;
+border: 1px solid #D7DBDD;
+border-radius: 0;
+outline: 0;
+}
+
+.resetbtn {
     margin: 10px;
-  }
+    font-family: "Hannari";
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    line-height: 1em;
+    color: #fff;
+    border-radius: 5%;
+    background-color: #4f00cf;
+    transition: .3s;
+    box-shadow: 6px 6px 3px #666;
+    border: 2px solid #4f00cf;
+    cursor: pointer;
+}
+
+.resetbtn:hover{
+    box-shadow: none;
+    color: #4f00cf;
+    background: #fff;
+}
+
+.button-c{
+    margin: 10px;
+    font-family: "Hannari";
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    line-height: 1em;
+    color: #fff;
+    border-radius: 5%;
+    background-color: #cf00cf;
+    transition: .3s;
+    box-shadow: 6px 6px 3px #666;
+    border: 2px solid #cf00cf;
+    cursor: pointer;
+}
+
+.button-c:hover{
+    box-shadow: none;
+    color: #cf00cf;
+    background: #fff;
+}
+
+@media screen and (max-width:1920px){
+    .sub-title{
+        font-size: 32px;
+    }
+
+    .food-title{
+        font-size: 28px;
+    }
+
+    .sweet-name,
+    .taste-name,
+    .num{
+        font-size: 20px;
+    }
+
+    .price-title{
+        font-size: 20px;
+    }
+}

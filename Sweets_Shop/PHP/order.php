@@ -10,6 +10,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/order.css">
         <title>Rabbit's Confectionery Shop</title>
 
     </head>
@@ -49,15 +50,39 @@
 
                 if (isset($_SESSION["reload"])){
                     if ($_SESSION["reload"] == 1){
-                        echo "<h3>注文内容</h3>";
-                        echo "　商　品：　".$_SESSION["sweet_name"]."<br> ".
-                             "　味　　：　".$_SESSION["taste_name"]."<br>".
-                             "　個　数：　".$_SESSION["num"]."<br>".
-                             "合計金額：　".$_SESSION["num"] * $_SESSION["price"]."円<br>".
-                             "合計金額：　".$_SESSION["time"]."<br><br>";
-                        echo "<form action = order_history.php method = POST>
-                                <input type = submit name = order_history value = 購入履歴へ>
-                              </form>";
+                        echo "<p class='confirm'>ご注文が確定しました。</p>".
+                             "<div class='order-history'>".
+                                "<div class='order'>".
+                                    "<div class='order-element'>".
+                                        "<p class='history-number'>注文内容</p>".
+                                    "</div>".
+                                    "<div class='order-element'>".
+                                        "<p class=element-1>商品：</p>".
+                                        "<p class=element-2>".$_SESSION["sweet_name"]."</p>".
+                                    "</div>".
+                                    "<div class='order-element'>".
+                                        "<p class=element-1>味：</p>".
+                                        "<p class=element-2>".$_SESSION["taste_name"]."</p>".
+                                    "</div>".
+                                    "<div class='order-element'>".
+                                        "<p class=element-1>個数：</p>".
+                                        "<p class=element-2>".$_SESSION["num"]."</p>".
+                                    "</div>".
+                                    "<div class='order-element'>".
+                                        "<p class=element-1>合計金額：</p>".
+                                        "<p class='element-2'>".$_SESSION["price"] * $_SESSION["num"]."円</p>".
+                                    "</div>".
+                                    "<div class='order-element'>".
+                                        "<p class=element-1>購入時刻：</p>".
+                                        "<p class='element-2'>".$_SESSION["time"]."</p>".
+                                    "</div>".
+                                    "<div class='order-element history'>".
+                                        "<form action = 'order_history.php' method = 'POST'>
+                                            <input type = 'submit' name = 'order_history' value = '購入履歴へ'>
+                                        </form>".
+                                    "</div>".
+                                "</div>".
+                             "</div>";
                     }
                 }
 

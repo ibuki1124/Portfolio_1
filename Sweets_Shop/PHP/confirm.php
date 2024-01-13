@@ -11,6 +11,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/order.css">
         <title>Rabbit's Confectionery Shop</title>
 
     </head>
@@ -89,11 +90,33 @@
                         $_SESSION["taste_id"] = $s["id"];
                         $_SESSION["taste_name"] = $s["name"];
                     }
-                    echo "こちらの商品で間違いありませんか？<br>".
-                         "　商　品：　".$_SESSION["sweet_name"]."<br>".
-                         "　味　　：　".$s["name"]."<br>".
-                         "　個　数：　".$_SESSION["num"]."<br>".
-                         "合計金額：　".$_SESSION["price"] * $_SESSION["num"]; 
+                    echo "<p class='confirm'>こちらの商品で間違いありませんか？</p>".
+                         "<div class='order-history'>".
+                            "<div class='order'>".
+                                "<div class='order-element'>".
+                                    "<p class='history-number'>注文内容</p>".
+                                "</div>".
+                                "<div class='order-element'>".
+                                    "<p class=element-1>商品：</p>".
+                                    "<p class=element-2>".$_SESSION["sweet_name"]."</p>".
+                                "</div>".
+                                "<div class='order-element'>".
+                                    "<p class=element-1>味：</p>".
+                                    "<p class=element-2>".$s["name"]."</p>".
+                                "</div>".
+                                "<div class='order-element'>".
+                                    "<p class=element-1>個数：</p>".
+                                    "<p class=element-2>".$_SESSION["num"]."</p>".
+                                "</div>".
+                                "<div class='order-element'>".
+                                        "<p class=element-1>合計金額：</p>".
+                                        "<p class='element-2 total'>".$_SESSION["price"] * $_SESSION["num"]."円</p>".
+                                "</div>".
+                                "<form action='order.php' method='POST'>
+                                            <input type='submit' name='order' value='注文確定' class='button-c'>
+                                        </form>".
+                                "</div>".
+                        "</div>";
                          $_SESSION["boolean_sweet"] = 0;                    
                 }else{
                     $_SESSION["boolean_sweet"] = 1; 
@@ -105,11 +128,6 @@
 
                 $dbh =null;
             ?>
-            <form action="order.php" method="POST">
-                <input type="submit" name="order" value="注文確定">
-            </form>
         </main>
-        <script>
-        </script>
     </body>
 </html>
