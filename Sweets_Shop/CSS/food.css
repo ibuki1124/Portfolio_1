@@ -1,0 +1,114 @@
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio]+label::before{
+    content: "";
+    display: inline-block;
+    background-size: contain;
+    width: 160px;
+    height: 160px;
+}
+
+input[type=radio][value="candy"]+label::before{
+    background-image: url(../img/sweets/candy.jpg);
+}
+input[type=radio][value="gummy"]+label::before{
+    background-image: url(../img/sweets/gummy.jpg);
+}
+input[type=radio][value="chocolate"]+label::before{
+    background-image: url(../img/sweets/chocolate.jpg);
+}
+input[type=radio][value="macaron"]+label::before{
+    background-image: url(../img/sweets/macaron.jpg);
+}
+input[type=radio][value="cake"]+label::before{
+    background-image: url(../img/sweets/cake.jpg);
+}
+
+input[type=radio][value="berry"]+label::before{
+    background-image: url(../img/tastes/berry.jpg);
+}
+input[type=radio][value="grape"]+label::before{
+    background-image: url(../img/tastes/grape.jpg);
+}
+input[type=radio][value="orange"]+label::before{
+    background-image: url(../img/tastes/orange.jpg);
+}
+
+input[type=radio][name="sweet"]:checked+label::before{
+    border: 5px solid #f00;
+    box-sizing: border-box;
+    transform: scale(1.2, 1.2);
+}
+
+input[type=radio][name="taste"]:checked+label::before{
+    border: 5px solid #00f;
+    box-sizing: border-box;
+    transform: scale(1.2, 1.2);
+}
+
+.food{
+    width: 100%;
+    text-align: center;
+}
+
+.sweets{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tastes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sweet-name,
+.taste-name{
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 100%;
+  }
+  
+  .field {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .inputtext {
+    color:rgba(43, 32, 32, 0.76) ;
+    font-size: 18px;
+    border-left: 0;
+    border-right: 0;
+    width: 80px;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px solid #D7DBDD;
+    padding: 0 10px;
+  }
+
+  .inputtext:focus{
+    border: 1px solid #D7DBDD;
+    outline: none;
+  }
+  
+  .button {
+    color:rgba(43, 32, 32, 0.76) ;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 25px;
+    background-color: white;
+    border: 1px solid #D7DBDD;
+    border-radius: 0;
+    outline: 0;
+  }
+  
+  .resetbtn {
+    margin: 10px;
+  }

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  html{
+    width: 100%;
+    height: 100%;
+  }
+
+  body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 185, 217);
+  }
+
+  header{
+    height: 10%;
+  }
+
+  main{
+    height: 90%;
+  }
+
+  .header{
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 185, 217);
+    z-index: 999;
+  }
+  
+  .nav-left{
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-center{
+    width: 60%;
+    height: 10%;
+    position: relative;
+    font-family: "Caveat",'Cherry Swash','Permanent Marker', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .nav-center::before{
+    width: 60px;
+    height: 60px;
+    content: "";
+    display: inline-block;
+    align-items: center;
+    background-image: url(../img/icon/icon_left.png);
+    background-size: contain;
+    left: 0;
+    margin-right: 8px;
+  }
+
+  .nav-center::after{
+    width: 60px;
+    height: 60px;
+    content: "";
+    display: inline-block;
+    align-items: center;
+    background-image: url(../img/icon/icon_right.png);
+    background-size: contain;
+    right: 0;
+    margin-left: 8px;
+  }
+
+  .nav-right{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  div form input[type=submit],
+  div form input[type=reset]{
+      margin: 10px;
+      font-family: "Yu Gothic";
+      /* font-family: "Hannari"; */
+      font-size: 16px;
+      font-weight: 900;
+      text-align: center;
+      width: 150px;
+      padding: 10px;
+      line-height: 1em;
+      color: #fff;
+      border-radius: 5%;
+      background-color: #cf00cf;
+      transition: .3s;
+      box-shadow: 6px 6px 3px #666;
+      border: 2px solid #cf00cf;
+      cursor: pointer;
+  }
+
+  div form input[type=submit]:hover,
+  div form input[type=reset]:hover{
+    box-shadow: none;
+    color: #cf00cf;
+    background: #fff;
+  }
+
+  .login_user{
+    padding: 10px;
+    position: fixed;
+    font-weight: 900;
+    color: fuchsia;
+    border: 3px solid rgb(191, 0, 255);
+    left: 0;
+    bottom: 0;
+  }

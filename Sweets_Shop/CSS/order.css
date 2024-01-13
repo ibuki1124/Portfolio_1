@@ -1,0 +1,101 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.sub-title{
+    font-size: 32px;
+    text-align: center;
+}
+
+.order-history{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.order{
+    width: 400px;
+    margin-bottom: 20px;
+    border: 5px solid pink;
+}
+
+.history-number{
+    text-align: center;
+    width: 100%;
+    background-color: wheat;
+    font-size: 24px;
+}
+
+.order-element{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.element-1{
+    width: 30%;
+    text-align: justify;
+    text-align-last: justify;
+    margin: 0 10px;
+}
+
+.element-2{
+    width: 70%;
+}
+
+.page-top{
+    width: 100px;
+    height: 60px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #ef3f98;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+a{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 60px;
+    text-decoration: none;
+}
+a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -25px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+a::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.fadein{
+    opacity: 1;
+ }
+
+ .no{
+    margin: 30px;
+    font-size: 24px;
+    font-weight: 900;
+ }
