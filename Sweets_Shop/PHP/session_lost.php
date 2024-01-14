@@ -26,7 +26,7 @@
                 </div>
                 <div class="nav-right">
                     <form action="sign_up.php" method="POST">
-                        <input type="submit" value="サインアップ">
+                        <input type="submit" value="新規登録">
                     </form>
                     <form action="login.php" method="POST">
                         <input type="submit" value="ログイン">
@@ -39,11 +39,5 @@
             <p>お手数ですが、再度ログインし直してください。</p>
             <p>3秒後に自動的にログイン画面に移動します。</p>
         </main>
-        
-        <?php
-                // echo "<p>あなたのセッションがタイムアウトしました。</p>".
-                //      "<p>お手数ですが、再度ログインし直してください。</p>";
-                //      "<p>3秒後に自動的にログイン画面に移動します。</p>";
-        ?>
     </body>
 </html>

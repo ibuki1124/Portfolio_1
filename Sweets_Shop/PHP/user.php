@@ -6,7 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel = "stylesheet" href = "../CSS/heander.css">
-        <!-- <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet"> -->
+        <link rel = "stylesheet" href = "../CSS/user.css">
         <title>Rabbit's Confectionery Shop</title>
     </head>
     <body>
@@ -68,7 +68,7 @@
                             $stmt -> bindParam(":key_password", $password);
                             $stmt -> bindParam(":key_address", $address);
                             $stmt -> execute();
-                            // echo "新規登録が完了しました<br>";
+
                             $sql = "select * from users where id = last_insert_id()";
                             $stmt = $dbh -> prepare($sql);
                             $stmt -> execute();
@@ -100,7 +100,6 @@
                         $success = $stmt -> rowCount();
                         $user = $stmt -> fetchAll(PDO::FETCH_ASSOC);
                         if ($success == 1){
-                            // echo "ログインに成功しました<br>";
                             $_SESSION["user_id"] = $user[0]["id"];
                             $_SESSION["user_name"] = $user[0]["name"];
                             $_SESSION["user_password"] = $user[0]["password"];
@@ -131,16 +130,38 @@
                 if (!empty($_SESSION["user_id"]) && !empty($_SESSION["user_name"]) && !empty($_SESSION["user_password"]) && !empty($_SESSION["user_address"])){
                     if (isset($_SESSION["success"])){
                         if($_SESSION["success"] == 1){
-                            echo "新規登録が完了しました。";
+                            echo "<p class='success'>新規登録が完了しました。</p>";
                         }else if ($_SESSION["success"] == 2){
-                            echo "ログインに成功しました。";
+                            echo "<p class='success'>ログインに成功しました。</p>";
                         }
                         $_SESSION["success"] = 0;
                     }
-                    echo "<h3>ログイン中のユーザ</h3>".
-                            "　会　員　ID：　".$_SESSION["user_id"]."<br>".
-                            "　　名　前　：　".$_SESSION["user_name"]."<br>".
-                            "お届け先住所：　".$_SESSION["user_address"];
+                    echo "<div class='user'>".
+                            "<p class='mypage'>マイページ</p>".
+                            "<div class='user-info'>".
+                                "<div class='login'><p>プロフィール</p></div>".
+                                "<div class='user-1'>".
+                                    "<div class='user-1-top'>".
+                                        "<p class='user-icon'><img src='../img/icon/user_icon.png' alt='アイコン'></p>".
+                                        "<p class='icon-not-edit'><span>＊現在、アイコンは変更できません</span></p>".
+                                    "</div>".
+                                    "<div class='user-1-top'>".
+                                        "<p class='user-id'>会員ID</p>".
+                                        "<p class='user-id'>".$_SESSION["user_id"]."</p>".
+                                    "</div>".
+                                "</div>".
+                                "<div class='user-2'>".
+                                    "<div class='user-name'>".
+                                        "<p>名前</p>".
+                                        "<p>".$_SESSION["user_name"]."</p>".
+                                    "</div>".
+                                    "<div class='user-address'>".
+                                        "<p>お届け先住所</p>".
+                                        "<p>".$_SESSION["user_address"]."</p>".
+                                    "</div>".
+                                "</div>".
+                            "</div>".
+                         "</div>";
                 }else{
                     header("Location:session_lost.php");
                     exit;

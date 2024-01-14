@@ -33,7 +33,6 @@
             <div class="container">
                 <form name="sign_up_form" method = "POST" action="user.php" class="sign-form">
                     <p class="auth-title">新規登録</p>
-                    <!-- <p class="auth-title">Rabbit's Confectionery Shop<br>(うさぎのお菓子屋)に新規登録する</p> -->
                     <div class="user-info-s">
                         <p>
                             お名前
@@ -59,40 +58,38 @@
                         <input type="text" name="address">
                     </div>
                     <div class="button button-s">
-                        <input  type="reset" name="reset" value="入力内容の破棄" class="form-button">
+                        <input  type="reset" name="reset" value="リセット" class="form-button">
                         <input  type="submit" name="sign_up" value="登録" class="form-button">
                     </div>   
                 </from>
                 <div class="error">
                     <?php
+                        try{
+                            $dbh=new PDO('mysql:host=localhost;dbname=ibuki','ibuki','pipopa');
+                        }catch(PDOException $e){
+                            echo $e->getmessage();
+                            exit;
+                        }
+
+                        // if (isset($_POST["sign_out"])){
+                        //     $sql = "delete from users where id = :key_user_id";
+                        //     $stmt = $dbh -> prepare($sql);
+                        //     $stmt -> bindParam(":key_user_id", $_SESSION["user_id"]);
+                        //     $stmt -> execute();
+                        //     echo "アカウントを削除しました。";
+                        // }
+
                         if (empty($_SESSION["boolean_s"])){
                             $_SESSION["boolean_s"] = 0;
                         }else if ($_SESSION["boolean_s"] == 1){
                             echo "＊空欄またはタブ・スペース(全角・半角)を含む文字は登録できません";
                         }
                         $_SESSION["boolean_s"] = 0;
+
+                        $dbh =null;
                     ?>
                 </div>
             </div>
-
-            <?php
-                try{
-                    $dbh=new PDO('mysql:host=localhost;dbname=ibuki','ibuki','pipopa');
-                }catch(PDOException $e){
-                    echo $e->getmessage();
-                    exit;
-                }
-
-                if (isset($_POST["sign_out"])){
-                    $sql = "delete from users where id = :key_user_id";
-                    $stmt = $dbh -> prepare($sql);
-                    $stmt -> bindParam(":key_user_id", $_SESSION["user_id"]);
-                    $stmt -> execute();
-                    echo "アカウントを削除しました。";
-                }
-
-                $dbh =null;
-            ?>
         </main>
         <script src="../JavaScript/form.js"></script>
     </body>

@@ -6,7 +6,6 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <!-- <meta name="viewport" content="width-device-width, initial-scale=1, minimum-scale=1, user-scalable=no"> -->
         <link rel = "stylesheet" href = "../CSS/heander.css">
         <link rel = "stylesheet" href = "../CSS/auth.css">
         <title>Rabbit's Confectionery Shop</title>
@@ -43,7 +42,7 @@
                         <span class="rabbit-eye-f" id="display"></span>
                     </div>
                     <div class="button button-l">
-                        <input  type="reset" name="reset" value="入力内容の破棄" >
+                        <input  type="reset" name="reset" value="リセット" >
                         <input  type="submit" name="login" value="ログイン" >
                     </div>
                 </from>

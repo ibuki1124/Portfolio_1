@@ -26,7 +26,7 @@
                 </div>
                 <div class="nav-right">
                     <form action="sign_up.php" method="POST">
-                        <input type="submit" value="サインアップ">
+                        <input type="submit" value="新規登録">
                     </form>
                     <form action="login.php" method="POST">
                         <input type="submit" value="ログイン">

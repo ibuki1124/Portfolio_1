@@ -125,7 +125,7 @@
                             <input type="number" value="1" class="inputtext" id="textbox" name="order_num" readonly>
                             <button type="button" class="button" id="up">＋</button>
                         </div>
-                        <button type="button" class="button resetbtn" id="reset">RESET</button>
+                        <button type="button" class="button resetbtn" id="reset">リセット</button>
                         <input type="submit" name="sweets" value="確認へ" class="button-c">
                     </div>
                 </div>

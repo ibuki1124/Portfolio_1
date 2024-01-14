@@ -10,7 +10,6 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
         <link rel = "stylesheet" href = "../CSS/heander.css">
         <link rel = "stylesheet" href = "../CSS/auth.css">
         <title>Rabbit's Confectionery Shop</title>
@@ -27,9 +26,9 @@
                     <h1>Rabbit's Confectionery Shop</h1>
                 </div>
                 <div class="nav-right">
-                    <form action="sign_up.php" method="POST" onsubmit="return check()">
+                    <!-- <form action="sign_up.php" method="POST" onsubmit="return check()">
                         <input type="submit" name="sign_out" id="sign_out" value="アカウントの削除">
-                    </form>
+                    </form> -->
                     <form action="logout.php" method="POST">
                         <input type="submit" value="ログアウト">
                     </form>
@@ -162,7 +161,7 @@
                                     <input type="text" name="address">
                                 </div>
                                 <div class="button button-e">
-                                    <input  type="reset" name="reset" value="入力内容の破棄" class="form-button">
+                                    <input  type="reset" name="reset" value="リセット" class="form-button">
                                     <input  type="submit" name="edit" value="更新" class="form-button">
                                 </div>   
                         <div class="error error-e">
