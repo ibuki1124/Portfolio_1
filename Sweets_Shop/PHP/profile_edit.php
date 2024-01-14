@@ -10,7 +10,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href = "../CSS/auth.css">
         <title>Rabbit's Confectionery Shop</title>
     </head>
@@ -40,7 +40,7 @@
             <div class="edit">
                 <?php
                     try{
-                        $dbh=new PDO('mysql:host=localhost;dbname=ibuki','ibuki','pipopa');
+                    $dbh=new PDO('mysql:host=localhost;dbname=rabbit_sweets','rabbit_1','portfolio');
                     }catch(PDOException $e){
                         echo $e->getmessage();
                         exit;
@@ -102,8 +102,7 @@
                         }
                     }
 
-                    echo 
-                        "<div class='container container-e'>".
+                    echo "<div class='container container-e'>".
                             "<p class=auth-title>現在の登録情報</p>".
                             "<div class=user-info-e>".
                                 "<p>会員ID</p>".
@@ -125,7 +124,6 @@
                         "</div>";
 
                     echo "<p class=edit-arrow>→</p>";
-                    
 
                     echo "<div class='container container-e'>".
                             "<form action=profile_edit.php method=POST>".
@@ -145,7 +143,7 @@
                                                 if ($_SESSION["boolean_e"] == 2){
                                                     echo "＊この名前は既に使われています。";
                                                 }
-                                            }                                
+                                            }
                                         ?>
                                         </span>
                                     </p>
@@ -163,7 +161,7 @@
                                 <div class="button button-e">
                                     <input  type="reset" name="reset" value="リセット" class="form-button">
                                     <input  type="submit" name="edit" value="更新" class="form-button">
-                                </div>   
+                                </div>
                         <div class="error error-e">
                         <?php
                             if ($_SESSION["boolean_e"] == 1){

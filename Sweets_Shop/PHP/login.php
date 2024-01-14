@@ -6,7 +6,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href = "../CSS/auth.css">
         <title>Rabbit's Confectionery Shop</title>
     </head>
@@ -51,7 +51,7 @@
                         if (empty($_SESSION["boolean_l"])){
                             $_SESSION["boolean_l"] = 0;
                         }else if ($_SESSION["boolean_l"] == 1){
-                            echo "＊空欄またはスペース(全角・半角)が含まれています";  
+                            echo "＊空欄またはスペース(全角・半角)が含まれています";
                         }else if ($_SESSION["boolean_l"] == 2){
                             echo "＊名前またはパスワードが違います";
                         }

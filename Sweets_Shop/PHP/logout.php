@@ -9,7 +9,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="refresh" content="3; url=login.php">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href = "../CSS/session_lost.css">
         <title>Rabbit's Confectionery Shop</title>
     </head>

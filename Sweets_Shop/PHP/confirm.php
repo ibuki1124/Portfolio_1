@@ -10,7 +10,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href = "../CSS/order.css">
         <title>Rabbit's Confectionery Shop</title>
 
@@ -36,7 +36,7 @@
         <main>
             <?php
                 try{
-                    $dbh=new PDO('mysql:host=localhost;dbname=ibuki','ibuki','pipopa');
+                    $dbh=new PDO('mysql:host=localhost;dbname=rabbit_sweets','rabbit_1','portfolio');
                 }catch(PDOException $e){
                     echo $e->getmessage();
                     exit;
@@ -57,7 +57,7 @@
                     }else if ($sweet == "cake"){
                         $sweet_id = 5;
                     }
-                    
+
                     if ($taste == "berry"){
                         $taste_id = 1;
                     }else if ($taste == "grape"){
@@ -117,9 +117,9 @@
                                         </form>".
                                 "</div>".
                         "</div>";
-                         $_SESSION["boolean_sweet"] = 0;                    
+                         $_SESSION["boolean_sweet"] = 0;
                 }else{
-                    $_SESSION["boolean_sweet"] = 1; 
+                    $_SESSION["boolean_sweet"] = 1;
                     header("Location:sweet.php");
                     exit;
                 }

@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href = "../CSS/top.css">
         <title>Rabbit's Confectionery Shop</title>
     </head>
@@ -32,7 +32,7 @@
                     </div>
                     <img src="../img/icon/icon_2.png" alt="うさぎ" class="top-image">
                     <div class='arrow_box-2'>
-                        このサイトではうさぎ型のお菓子を5種類と<br>
+                        このサイトではうさぎ型のお菓子を5種類を<br>
                         それぞれストロベリー味・グレープ味・オレンジ味の<br>
                         3種類用意しています！<br>
                         購入の際は画像をクリックして選択してください!

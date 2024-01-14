@@ -9,7 +9,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href = "../CSS/order.css">
         <title>Rabbit's Confectionery Shop</title>
 
@@ -17,7 +17,7 @@
     <body>
         <header>
             <div class="header">
-                <div class="nav-left">                
+                <div class="nav-left">
                     <form action="sweet.php" method="POST">
                         <input type="submit" value="商品一覧">
                     </form>
@@ -38,7 +38,7 @@
         <main>
             <?php
                 try{
-                    $dbh=new PDO('mysql:host=localhost;dbname=ibuki','ibuki','pipopa');
+                    $dbh=new PDO('mysql:host=localhost;dbname=rabbit_sweets','rabbit_1','portfolio');
                 }catch(PDOException $e){
                     echo $e->getmessage();
                     exit;
@@ -86,9 +86,9 @@
                     }
                 }
 
-                if (isset($_POST["order"])){ 
-                    date_default_timezone_set('Asia/Tokyo');  
-                    $_SESSION["time"] = date('Y年m月d日 H:i:s');                
+                if (isset($_POST["order"])){
+                    date_default_timezone_set('Asia/Tokyo');
+                    $_SESSION["time"] = date('Y年m月d日 H:i:s');
                     $sql = "insert into sales(user_id) value(:key_user_id)";
                     $stmt = $dbh -> prepare($sql);
                     $stmt -> bindParam(":key_user_id", $_SESSION["user_id"]);

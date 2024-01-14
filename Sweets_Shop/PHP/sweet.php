@@ -10,7 +10,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href="../CSS/food.css">
         <title>Rabbit's Confectionery Shop</title>
 
@@ -46,26 +46,26 @@
                                 <label for="candy"></label>
                             </div>
                             <div class="sweet">
-                                <div class="sweet-name">グミ</div>       
+                                <div class="sweet-name">グミ</div>
                                 <input type="radio" name="sweet" value="gummy" id="gummy">
                                 <label for="gummy"></label>
                             </div>
-                            <div class="sweet">  
-                                <div class="sweet-name">チョコレート</div>         
+                            <div class="sweet">
+                                <div class="sweet-name">チョコレート</div>
                                 <input type="radio" name="sweet" value="chocolate" id="chocolate">
                                 <label for="chocolate"></label>
                             </div>
-                            <div class="sweet">    
-                                <div class="sweet-name">マカロン</div>         
+                            <div class="sweet">
+                                <div class="sweet-name">マカロン</div>
                                 <input type="radio" name="sweet" value="macaron" id="macaron">
                                 <label for="macaron"></label>
                             </div>
-                            <div class="sweet">   
-                                <div class="sweet-name">ケーキ</div>    
+                            <div class="sweet">
+                                <div class="sweet-name">ケーキ</div>
                                 <input type="radio" name="sweet" value="cake" id="cake">
                                 <label for="cake"></label>
                             </div>
-                            <div class="sweet">   
+                            <div class="sweet">
                                 <div class="price">
                                     <p class="price-title">値段表</p>
                                     <div class="price-box">
@@ -110,7 +110,7 @@
                             </div>
 
                             <div class="taste">
-                                <div class="taste-name">オレンジ</div>    
+                                <div class="taste-name">オレンジ</div>
                                 <input type="radio" name="taste" value="orange" id="orange">
                                 <label for="orange"></label>
                             </div>

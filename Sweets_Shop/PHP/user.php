@@ -5,7 +5,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href = "../CSS/user.css">
         <title>Rabbit's Confectionery Shop</title>
     </head>
@@ -36,7 +36,7 @@
         <main>
             <?php
                 try{
-                    $dbh=new PDO('mysql:host=localhost;dbname=ibuki','ibuki','pipopa');
+                    $dbh=new PDO('mysql:host=localhost;dbname=rabbit_sweets','rabbit_1','portfolio');
                 }catch(PDOException $e){
                     echo $e->getmessage();
                     exit;
@@ -124,7 +124,6 @@
                         header("Location:login.php");
                         exit;
                     }
-                    
                 }
 
                 if (!empty($_SESSION["user_id"]) && !empty($_SESSION["user_name"]) && !empty($_SESSION["user_password"]) && !empty($_SESSION["user_address"])){

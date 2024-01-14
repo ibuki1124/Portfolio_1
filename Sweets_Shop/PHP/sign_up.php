@@ -6,7 +6,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" href = "../CSS/heander.css">
+        <link rel = "stylesheet" href = "../CSS/header.css">
         <link rel = "stylesheet" href = "../CSS/auth.css">
         <title>Rabbit's Confectionery Shop</title>
 
@@ -42,7 +42,7 @@
                                     if ($_SESSION["boolean_s"] == 2){
                                         echo "＊この名前は既に使われています。";
                                     }
-                                }                                
+                                }
                             ?>
                             </span>
                         </p>
@@ -60,12 +60,12 @@
                     <div class="button button-s">
                         <input  type="reset" name="reset" value="リセット" class="form-button">
                         <input  type="submit" name="sign_up" value="登録" class="form-button">
-                    </div>   
+                    </div>
                 </from>
                 <div class="error">
                     <?php
                         try{
-                            $dbh=new PDO('mysql:host=localhost;dbname=ibuki','ibuki','pipopa');
+                            $dbh=new PDO('mysql:host=localhost;dbname=rabbit_sweets','rabbit_1','portfolio');
                         }catch(PDOException $e){
                             echo $e->getmessage();
                             exit;

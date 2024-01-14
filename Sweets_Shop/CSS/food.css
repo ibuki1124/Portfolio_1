@@ -139,7 +139,7 @@ input[type=radio][name="taste"]:checked+label::before{
 .container-2 {
     width: 100%;
   }
-  
+
 .field {
 display: flex;
 justify-content: center;
